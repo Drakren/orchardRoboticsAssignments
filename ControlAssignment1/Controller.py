@@ -128,7 +128,7 @@ class AudibotWaypointTraversal(Node):
         correction = max(min(correction, 10.68), -10.68)
 
         steeringmsg.data = correction
-        speedmsg.data = 6.0
+        speedmsg.data = 0.4*dist
 
         self.gear.publish(gearmsg)
         self.steer.publish(steeringmsg)
